@@ -1,16 +1,36 @@
-public class IndexModel : PageModel
-{
-    private readonly IContatoRepository _repo;
-
-    public IndexModel(IContatoRepository repo)
-    {
-        _repo = repo;
-    }
-
-    public List<Contato> Contatos { get; set; } = new();
-
-    public async Task OnGetAsync()
-    {
-        Contatos = await _repo.GetAllAsync();
-    }
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Lista de Contatos";
 }
+
+<h2>Contatos</h2>
+<a asp-page="Create" class="btn btn-primary">Novo Contato</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>Email</th>
+            <th>Data Nasc.</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var contato in Model.Contatos)
+        {
+            <tr>
+                <td>@contato.Nome</td>
+                <td>@contato.Telefone</td>
+                <td>@contato.Email</td>
+                <td>@contato.DataNascimento.ToShortDateString()</td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@contato.Id">Editar</a> |
+                    <a asp-page="Details" asp-route-id="@contato.Id">Detalhes</a> |
+                    <a asp-page="Delete" asp-route-id="@contato.Id">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
