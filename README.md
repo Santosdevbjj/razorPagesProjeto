@@ -1,5 +1,7 @@
 ## Criando páginas poderosas no .Net com Razor Pages
 
+<img width="1080" height="623" alt="Screenshot_20251030-155417" src="https://github.com/user-attachments/assets/160c9928-1d3d-4140-a420-bcc95dc5890c" />
+
 
 ---
 
