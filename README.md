@@ -7,7 +7,9 @@
 
 # 📒 Projeto Razor Pages - Agenda de Contatos
 
-Este projeto demonstra como criar páginas poderosas no .NET utilizando Razor Pages, aplicando boas práticas de programação orientada a objetos e integração com banco de dados PostgreSQL. O objetivo é construir um CRUD completo de contatos com estrutura limpa, escalável e moderna.
+Este projeto demonstra como criar páginas poderosas no .NET utilizando Razor Pages, aplicando boas práticas de programação orientada a objetos e integração com banco de dados PostgreSQL.
+
+O objetivo é construir um CRUD completo de contatos com estrutura limpa, escalável e moderna.
 
 ---
 
@@ -108,4 +110,58 @@ Arquivo de configuração que contém a `ConnectionString` para o banco PostgreS
 }
 
 ---
+```
+
+**Estrutura de pastas e arquivos do repositório**
+
+
+<img width="951" height="1420" alt="Screenshot_20251030-154135" src="https://github.com/user-attachments/assets/7dda4877-6881-4a0a-99d7-a4f90866c776" />
+
+---
+
+
+
+🌐 **Pasta de Imagens**
+
+wwwroot/imagens/
+Diretório público para armazenar imagens dos contatos. Pode ser usado para upload ou exibição via URL.
+
+---
+
+🛠️ **Como Executar o Projeto**
+
+**1. Clone o repositório**
+   `bash
+   git clone https://github.com/Santosdevbjj/razorPagesProjeto.git
+   cd razorPagesProjeto
+   `
+
+**2. Configure o banco PostgreSQL**
+   - Crie o banco AgendaDb
+   - Atualize appsettings.json com suas credenciais
+
+**3. Execute as migrações**
+   `bash
+   dotnet ef migrations add InitialCreate
+   dotnet ef database update
+   `
+
+**4. Execute a aplicação**
+   `bash
+   dotnet run
+   `
+
+**5. Acesse no navegador**
+   `
+   http://localhost:5000
+   `
+
+---
+
+📬 **Autor**
+Sergio Santos  
+
+---
+
+
 
