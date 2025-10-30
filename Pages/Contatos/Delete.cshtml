@@ -1,0 +1,10 @@
+@page "{id:int}"
+@model DeleteModel
+<h2>Excluir Contato</h2>
+
+<p>Tem certeza que deseja excluir o contato <strong>@Model.Contato.Nome</strong>?</p>
+
+<form method="post">
+    <button type="submit" class="btn btn-danger">Excluir</button>
+    <a asp-page="Index" class="btn btn-secondary">Cancelar</a>
+</form>
