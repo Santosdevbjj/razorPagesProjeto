@@ -1,0 +1,13 @@
+@page
+@model CreateModel
+<h2>Novo Contato</h2>
+
+<form method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+    <input asp-for="Contato.Nome" class="form-control" placeholder="Nome" />
+    <input asp-for="Contato.Telefone" class="form-control" placeholder="Telefone" />
+    <input asp-for="Contato.Email" class="form-control" placeholder="Email" />
+    <input asp-for="Contato.DataNascimento" class="form-control" type="date" />
+    <input asp-for="Contato.Foto" class="form-control" placeholder="URL da Foto" />
+    <button type="submit" class="btn btn-success">Salvar</button>
+</form>
